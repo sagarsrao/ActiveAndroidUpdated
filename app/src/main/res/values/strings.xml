@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">ActiveAndroidUpdated</string>
+
+    <string name="title_activity_select_delete_update">SelectDeleteUpdateActivity</string>
+
 </resources>
