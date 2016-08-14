@@ -1,6 +1,7 @@
 package com.example.sumit.activeandroidupdated;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -108,8 +109,13 @@ public class MainActivity extends Activity {
             e.printStackTrace();
 
         }
+     }
 
 
-
+    public void selectUpdateDelete(View view) {
+        Intent intent = new Intent(this, SelectDeleteActivity.class);
+        startActivity(intent);
     }
+
+
 }
