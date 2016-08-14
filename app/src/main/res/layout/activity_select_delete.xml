@@ -100,7 +100,16 @@
             android:background="@drawable/custom_selector_button"
             android:text="Delete"
             android:textColor="#FFF" />
+
     </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_selector_button"
+        android:text="BACKTOMAIN"
+        android:textColor="#FFF"
+        android:id="@+id/bthome"/>
 
     <ListView
         android:id="@+id/list_data"
