@@ -23,6 +23,9 @@ public class Person  extends Model {
 
 
 
+
+
+
     public Person() {
         // Notice how super() has been called to perform default initialization
         // of our Model subclass
@@ -33,6 +36,6 @@ public class Person  extends Model {
         super();
         this.personName = personName;
         this.personAge = personAge;
-        PersonScore = personScore;
+        this.PersonScore = personScore;
     }
 }

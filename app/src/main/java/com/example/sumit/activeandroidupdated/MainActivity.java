@@ -4,12 +4,14 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.activeandroid.ActiveAndroid;
 import com.activeandroid.Model;
 import com.activeandroid.query.Select;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -17,6 +19,11 @@ public class MainActivity extends Activity {
 
     EditText edpersonname,edpersonage;
     EditText edphy,edche,edmat,edbio;
+    ListView mListdata;
+
+
+    private SagarListAdapter sagarListAdapter;
+
 
 
 
@@ -31,6 +38,8 @@ public class MainActivity extends Activity {
         edphy=(EditText)findViewById(R.id.score_physics);
         edche=(EditText)findViewById(R.id.score_chemistry);
         edmat=(EditText)findViewById(R.id.score_maths);
+
+        mListdata=(ListView)findViewById(R.id.list_all);
 
 
     }
@@ -68,14 +77,14 @@ public class MainActivity extends Activity {
 
             List<Person> list=select.all().from(Person.class).execute();
 
-            Iterator iterator=list.iterator();
+//            Iterator iterator=list.iterator();
             /*while (iterator.hasNext()){
 
                 Toast.makeText(getApplicationContext(),"",)
             }*/
 
 
-            StringBuilder builder = new StringBuilder();
+            /*StringBuilder builder = new StringBuilder();
             for (Person person : list) {
                 builder.append("Name: ")
                         .append(person.personName)
@@ -85,12 +94,16 @@ public class MainActivity extends Activity {
                         .append(person.PersonScore)
                         .append("\n");
 
+            }*/
 
-                //score object is appended
 
-            }
+            sagarListAdapter=new SagarListAdapter(this);
+            sagarListAdapter.setmData((ArrayList<Person>) list);
+            mListdata.setAdapter(sagarListAdapter);
 
-            Toast.makeText(this, builder.toString(), Toast.LENGTH_LONG).show();
+
+
+           // Toast.makeText(this, builder.toString(), Toast.LENGTH_LONG).show();
         }catch (Exception e){
             e.printStackTrace();
 

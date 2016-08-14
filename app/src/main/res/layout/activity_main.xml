@@ -79,6 +79,13 @@
             android:hint="B" />
     </LinearLayout>
 
+
+
+
+
+
+
+
     <Button
         android:id="@+id/save"
         android:layout_width="match_parent"
@@ -100,5 +107,13 @@
         android:onClick="showAll"
         android:text="Show All"
         android:textColor="#FFF" />
+
+
+
+    <ListView
+        android:id="@+id/list_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
 
 </LinearLayout>
