@@ -29,7 +29,7 @@ public class SelectDeleteActivity extends Activity
     private ListView mListData;
     private SagarListAdapter mAdapter;
 
-    private EditText mEditTextPersonName;
+    private EditText mEditTextPersonEmail;
     private EditText mEditTextPersonAge;
 
     private EditText mScorePhysics;
@@ -65,17 +65,17 @@ public class SelectDeleteActivity extends Activity
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_delete);
-        mListData = (ListView) findViewById(R.id.list_data);
+        mListData = (ListView) findViewById(R.id.list_data1);
         mAdapter = new SagarListAdapter(this);
         mListData.setAdapter(mAdapter);
 
-        mEditTextPersonName = (EditText) findViewById(R.id.person_name);
+        mEditTextPersonEmail = (EditText) findViewById(R.id.person_email);
         mEditTextPersonAge = (EditText) findViewById(R.id.person_age);
 
-        mScorePhysics = (EditText) findViewById(R.id.score_physics);
-        mScoreChemistry = (EditText) findViewById(R.id.score_chemistry);
-        mScoreMaths = (EditText) findViewById(R.id.score_maths);
-        mScoreBiology = (EditText) findViewById(R.id.score_biology);
+        mScorePhysics = (EditText) findViewById(R.id.score_physics1);
+        mScoreChemistry = (EditText) findViewById(R.id.score_chemistry1);
+        mScoreMaths = (EditText) findViewById(R.id.score_maths1);
+        mScoreBiology = (EditText) findViewById(R.id.score_biology1);
 
         mSelect = (Button) findViewById(R.id.select);
         mDelete = (Button) findViewById(R.id.delete);
@@ -113,9 +113,9 @@ public class SelectDeleteActivity extends Activity
 
     }
 
-    private String extractPersonName()
+    private String extractPersonEmail()
     {
-        return mEditTextPersonName
+        return mEditTextPersonEmail
                 .getText()
                 .toString();
     }
@@ -148,7 +148,7 @@ public class SelectDeleteActivity extends Activity
 
     public Query buildQuery() {
         String and = "and ".intern();
-        String personName = extractPersonName();
+        String personEmail = extractPersonEmail();
         int personAge = extractPersonAge();
         int scorePhysics = extractScoreFrom(mScorePhysics);
         int scoreChemistry = extractScoreFrom(mScoreChemistry);
@@ -160,10 +160,10 @@ public class SelectDeleteActivity extends Activity
         StringBuilder queryForScore = new StringBuilder();
         ArrayList<String> queryArgumentsForScore = new ArrayList<String>();
 
-        if (personName != null && personName.length() > 0) {
-            queryForPerson.append("personName=? ")
+        if (personEmail != null && personEmail.length() > 0) {
+            queryForPerson.append("personEmail=? ")
                     .append(and);
-            queryArgumentsForPerson.add(personName);
+            queryArgumentsForPerson.add(personEmail);
         }
         if (personAge > 0) {
             queryForPerson.append("personAge=? ")

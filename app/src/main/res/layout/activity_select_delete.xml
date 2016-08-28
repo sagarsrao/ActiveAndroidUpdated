@@ -10,14 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin" >
 
     <EditText
-        android:id="@+id/person_name"
+        android:id="@+id/person_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/custom_bg_edit_text"
         android:ems="15"
-        android:hint="Name..."
+        android:hint="Enter your email id..."
         android:textColor="#f39c12" />
 
     <EditText
@@ -28,7 +28,7 @@
         android:layout_marginTop="4dp"
         android:background="@drawable/custom_bg_edit_text"
         android:ems="15"
-        android:hint="Age..."
+        android:hint="Enter your Age..."
         android:textColor="#f39c12" />
 
     <LinearLayout
@@ -40,40 +40,40 @@
         android:weightSum="4" >
 
         <EditText
-            android:id="@+id/score_physics"
+            android:id="@+id/score_physics1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/custom_bg_edit_text"
-            android:hint="P" />
+            android:hint="PHY" />
 
         <EditText
-            android:id="@+id/score_chemistry"
+            android:id="@+id/score_chemistry1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
             android:layout_marginRight="3dp"
             android:layout_weight="1"
             android:background="@drawable/custom_bg_edit_text"
-            android:hint="C" />
+            android:hint="CHE" />
 
         <EditText
-            android:id="@+id/score_maths"
+            android:id="@+id/score_maths1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dp"
             android:layout_marginRight="6dp"
             android:layout_weight="1"
             android:background="@drawable/custom_bg_edit_text"
-            android:hint="M" />
+            android:hint="MATHS" />
 
         <EditText
-            android:id="@+id/score_biology"
+            android:id="@+id/score_biology1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/custom_bg_edit_text"
-            android:hint="B" />
+            android:hint="BIO" />
     </LinearLayout>
 
     <LinearLayout
@@ -112,7 +112,7 @@
         android:id="@+id/bthome"/>
 
     <ListView
-        android:id="@+id/list_data"
+        android:id="@+id/list_data1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
     </ListView>

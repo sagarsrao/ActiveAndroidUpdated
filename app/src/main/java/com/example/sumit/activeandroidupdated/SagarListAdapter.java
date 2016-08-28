@@ -85,7 +85,7 @@ public class SagarListAdapter extends BaseAdapter {
 
     private void initValues(ViewHolder holder, Person currentPerson) {
         holder.personName
-                .setText(currentPerson.personName);
+                .setText(currentPerson.personEmail);
 
         holder.personAge
                 .setText(currentPerson.personAge + "");

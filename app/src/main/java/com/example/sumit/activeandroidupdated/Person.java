@@ -10,8 +10,8 @@ import com.activeandroid.annotation.Table;
 @Table(name = "Person")
 public class Person  extends Model {
     // Notice how we specified the name of our column here
-    @Column(name = "personName")
-    public String personName;
+    @Column(name = "personEmail")
+    public String personEmail;
 
     // Notice how we specified the name of our column here
     @Column(name = "personAge")
@@ -19,22 +19,15 @@ public class Person  extends Model {
 
     @Column(name="PersonScore")
     public Score PersonScore;
-
-
-
-
-
-
-
     public Person() {
         // Notice how super() has been called to perform default initialization
         // of our Model subclass
         super();
     }
 
-    public Person(String personName, int personAge, Score personScore) {
+    public Person(String personEmail, int personAge, Score personScore) {
         super();
-        this.personName = personName;
+        this.personEmail = personEmail;
         this.personAge = personAge;
         this.PersonScore = personScore;
     }
